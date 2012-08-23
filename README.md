@@ -1,0 +1,1 @@
+Simple library for serialization/deserialization on C#.
