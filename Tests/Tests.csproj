@@ -15,4 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Serializer\Serializer.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UnitTest1.cs" />
+  </ItemGroup>
 </Project>
