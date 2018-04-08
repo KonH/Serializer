@@ -8,7 +8,6 @@ using System.Xml.Serialization;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization.Formatters.Soap;
 
 namespace Serializer
 {
@@ -43,12 +42,6 @@ namespace Serializer
                         }
                         break;
                     
-                    case SerializationMethod.Soap:
-                        {
-                            Serialize_Soap(stream, obj);
-                        }
-                        break;
-                    
                     case SerializationMethod.Binary:
                         {
                             Serialize_Binary(stream, obj);
@@ -69,12 +62,6 @@ namespace Serializer
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             serializer.Serialize(stream, obj);
-        }
-
-        private void Serialize_Soap(FileStream stream, T obj)
-        {
-            SoapFormatter formatter = new SoapFormatter();
-            formatter.Serialize(stream, obj);
         }
 
         private void Serialize_Binary(FileStream stream, T obj)
@@ -101,11 +88,7 @@ namespace Serializer
                         obj = Deserialize_Xml(stream);
                     }
                     break;
-                case SerializationMethod.Soap:
-                    {
-                        obj = Deserialize_Soap(stream);
-                    }
-                    break;
+
                 case SerializationMethod.Binary:
                     {
                         obj = Deserialize_Binary(stream);
@@ -123,14 +106,6 @@ namespace Serializer
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             T obj = (T)serializer.Deserialize(stream);
             
-            return obj;
-        }
-
-        private T Deserialize_Soap(Stream stream)
-        {
-            SoapFormatter formatter = new SoapFormatter();
-            T obj = (T)formatter.Deserialize(stream);
-
             return obj;
         }
 

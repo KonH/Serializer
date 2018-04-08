@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{D1192FB4-0450-4ED8-8390-5376B6CB6846}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/UnitTest1.cs">
+    <Files>
+      <File FileName="Tests/UnitTest1.cs" Line="51" Column="38" />
+      <File FileName="Serializer/SerializationMethod.cs" Line="10" Column="13" />
+      <File FileName="Serializer/Serializer.cs" Line="91" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

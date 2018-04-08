@@ -8,7 +8,6 @@ namespace Serializer
     public enum SerializationMethod
     {
         Xml,
-        Soap,
         Binary
     }
 }
